@@ -3,6 +3,10 @@ node {
      	   checkout scm
      }
 
+     stage ('npm install') {
+     	   sh './gradlew npmInstall'
+     }
+
      stage ('assemble') {
      	   sh './gradlew assemble'
      }
